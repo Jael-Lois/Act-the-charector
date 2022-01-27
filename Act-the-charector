@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<time.h>
+int main()
+{
+
+  char names[98][100] = {"Sarah","Lydia","Chole","Adam","Caiaphas","Deborah","Ishmael","Melchizedek","Luke","Philip","Laban","Joshua","Jonah","Hagar","Hannah","Jonathan","Judas Iscariot","Jude","Pontius Pilate","Rebecca","Mark","Mordecai","Moses","Elias","Elijah","Elisha","Enoch","Esau","Esther","Eve","Gabriel","Gideon","Cain","Ahab","Ahasuerus","Andrew","Bartholomew","Bathsheba","Benjamin","Boaz","Kezia","Aaron","Abednego","Abel","Abigail","Adam","Ahab","Maria","Mary Magdalene","Lazurus","Martha","Judah","Shadrach"," Mishael"," Meshach","Zaphnath Paaneah","Azariah","Abednego","Daniel","Hananiah","Mishael","Azariah","Isaac","Matthew","John the Baptist","Pharisees","Sadducees","Hosea","Amos","Mary","Solomon","Goliath","Absalom","Samuel","Saul","Nitzevet david mom","Jesse","Daniel","Esra","Nehemiah","James","Joel","Joseph","Jael","John","Abraham","Lot","David","Jessabel","Darius","Alpheus","Zeheriah","Peter","Paul","Esther","Jesus","Hephzibah","Ruth"};
+
+  int n,i,a;
+
+  Begin :
+
+  printf("________________________________________________________________________________");
+
+  printf("\nYou have two choices of charectors to act");
+  printf("\nYou have 60 seconds before the time runs out\n\n");
+  sleep(5);
+
+  for(i=1;i<=2;i++)
+  {
+    n = rand()%98;
+    printf("\n\n________________________________________________________________________________");
+    printf("\n\nAct the Person named : %s",names[n]);
+    printf("\n\n________________________________________________________________________________");
+  }
+
+  printf("\n\nYour time starts ");
+  sleep(7);
+  printf("NOW!!");
+  sleep(1);
+  sleep(60);
+  printf("Your chance is over");
+  goto Begin;
+  return 0;
+}
